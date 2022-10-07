@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30, 38%, 92%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.card{
+    border-radius: 12px;
+    position: absolute;
+    top: 125px;
+    margin-top: auto;
+    width: 600px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+}
+.desktop-photo{
+    width: 320px;
+    height: 450px;
+}
+.lg-pic{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: block;
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+    object-position: left;
+}
+.mobile-photo{
+    display: none;
+}
+.details{
+    object-position: right;
+    margin: 30px;
+}
+.type{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+}
+.title{
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+}
+.descraption{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 2em;
+    line-height: 20px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.price-new{
+    margin-right: 30px;
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+.price-old{
+    text-decoration: line-through;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+.btn{
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    width: 230px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: hsl(158, 63%, 15%);
+}
+.btn img {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    .desktop-photo{
+        display: none;
+    }
+    .sm-pic{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .mobile-photo{
+        display: block;
+        height: 300px;
+        width: 360px;
+        
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .card {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        height: 700px;
+        top: 0;
+        margin: 30px 20px;
+    }
+}
